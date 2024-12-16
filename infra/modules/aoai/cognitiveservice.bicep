@@ -15,7 +15,7 @@ resource cognitiveServices 'Microsoft.CognitiveServices/accounts@2021-10-01' = [
       publicNetworkAccess: 'Disabled'
       networkAcls: {defaultAction: 'Deny'}
       apiProperties: {
-        statisticsEnabled: false
+        statisticsEnabled: true
       }
       customSubDomainName: toLower('${config.name}-${resourceSuffix}')
     }
